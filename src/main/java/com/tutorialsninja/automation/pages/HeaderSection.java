@@ -11,7 +11,6 @@ public class HeaderSection {
 	public HeaderSection()
 	{
 		PageFactory.initElements(Base.driver, this);
-		
 	}
 	
 	@FindBy(xpath="//span[text()=\"My Account\"]")
@@ -19,4 +18,7 @@ public class HeaderSection {
 	
 	@FindBy(linkText="Register")
 	public static WebElement Register;
+	
+	@FindBy(linkText="Login")
+	public static WebElement LoginOption;
 }

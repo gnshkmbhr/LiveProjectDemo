@@ -62,7 +62,7 @@ public class RegisterPage {
 	@FindBy(css="input[id=\"input-password\"]+div")
 	public static WebElement PasswordWarning;
 	
-	@FindBy(css="div[class$=\"alert-dismissible\"]")
+	@FindBy(xpath="//div[contains(@class,'alert alert-danger alert-dismissible')]")
 	public static WebElement MainWarning;
 	
 	@FindBy(css="input[name=\"newsletter\"][value=\"1\"]")
@@ -74,9 +74,11 @@ public class RegisterPage {
 		
 		Elements.TypeText(RegisterPage.FirstName, map.get("FirstName"));
 		Elements.TypeText(RegisterPage.LastName, map.get("LastName"));
+		//Elements.TypeText(RegisterPage.EmailID, map.get("emailID"));
 		Elements.TypeText(RegisterPage.Telephone, map.get("Telephone"));
 		Elements.TypeText(RegisterPage.Password, map.get("Password"));
-		
+		Elements.TypeText(RegisterPage.ConfirmPassword,map.get("Password"));
+			
 		if(dataType.equalsIgnoreCase("duplicate"))
 			Elements.TypeText(RegisterPage.EmailID, map.get("EmailID"));
 		else

@@ -5,11 +5,11 @@ Scenario: Verify whether the user is able to register into the application by pr
 	Given I launch the application
 	And Navigate to Account Registration page
 	When I provide all the personal details
-					|FirstName|Ganesh 						|
-					|LastName |Kumbhar						|
-					|EmailID  |gnshkmbhr@gmail.com|
+					|FirstName|Ganesh 					|
+					|LastName |Kumbhar					|
+					|EmailID  |gnshkmbhr@gmail.com		|
 					|Telephone|1336499446 				|
-					|Password	|ganeshkumbhar27		|
+					|Password |ganeshkumbhar27		    |
 					
 	And Select the privacy policy
 	And Click on Continue button
@@ -28,11 +28,11 @@ Scenario: Verify whether the user is able to register into the application by pr
 	Given I launch the application
 	And Navigate to Account Registration page
 	When I provide all the personal details
-					|FirstName|Ganesh 						|
-					|LastName |Kumbhar						|
-					|EmailID  |gnshkmbhr@gmail.com|
+					|FirstName|Ganesh 					|
+					|LastName |Kumbhar					|
+					|EmailID  |gnshkmbhr@gmail.com		|
 					|Telephone|1336499446 				|
-					|Password	|ganeshkumbhar27		|
+					|Password |ganeshkumbhar27	     	|
 	And Select newsletter options				
 	And Select the privacy policy
 	And Click on Continue button
@@ -43,11 +43,11 @@ Scenario: Verify whether the user is able to register into the application by pr
 	Given I launch the application
 	And Navigate to Account Registration page
 	When I provide the below duplicate details
-					|FirstName|Ganesh 						|
-					|LastName |Kumbhar						|
-					|EmailID  |gnshkmbhr@gmail.com|
+					|FirstName|Ganesh 					|
+					|LastName |Kumbhar					|
+					|EmailID  |gnshkmbhr@gmail.com		|
 					|Telephone|1336499446 				|
-					|Password	|ganeshkumbhar27		|				
+					|Password |ganeshkumbhar27	     	|				
 	And Select the privacy policy
 	And Click on Continue button
 	Then I should see the user is restricted from creating duplicate account

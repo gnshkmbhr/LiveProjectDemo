@@ -33,7 +33,7 @@ public class Register {
 	}
 
 	@When("^I provide all the personal details$")
-	public void i_provide_all_the_personal_details(DataTable datatable,String dataType) {
+	public void i_provide_all_the_personal_details(DataTable datatable) {
 		
 	    RegisterPage.enterAllDetails(datatable,"unique");
 	}
@@ -83,13 +83,13 @@ public class Register {
 	@When("^I provide the below duplicate details$")
 	public void i_provide_the_below_duplicate_details(DataTable datatable) {
 		
-	 RegisterPage.enterAllDetails(datatable, "duplicate");
+	 RegisterPage.enterAllDetails(datatable,"duplicate");
 	 
 	}
 
 	@Then("^I should see the user is restricted from creating duplicate account$")
 	public void i_should_see_the_user_is_restricted_from_creating_duplicate_account() {
 		
-		Assert.assertTrue(Elements.VerifyTextEquals(RegisterPage.MainWarning, "Warning: You must agree to the Privacy Policy!"));
+		Assert.assertTrue(Elements.isDisplayed(RegisterPage.MainWarning));
 	}
 }
