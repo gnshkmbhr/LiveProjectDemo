@@ -90,6 +90,12 @@ public class Register {
 	@Then("^I should see the user is restricted from creating duplicate account$")
 	public void i_should_see_the_user_is_restricted_from_creating_duplicate_account() {
 		
+		try {
 		Assert.assertTrue(Elements.isDisplayed(RegisterPage.MainWarning));
 	}
-}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+}	

@@ -9,7 +9,8 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features={"classpath:FeatureFiles/Register.feature",
 				"classpath:FeatureFiles/Login.feature",
-				"classpath:FeatureFiles/Search.feature"},
+				"classpath:FeatureFiles/Search.feature",
+				"classpath:FeatureFiles/Orders.feature"},
 
 		glue={"classpath:com.tutorialsninja.automation.stepdef"},
 		
