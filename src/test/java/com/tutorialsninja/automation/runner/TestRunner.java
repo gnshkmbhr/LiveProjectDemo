@@ -19,6 +19,6 @@ import cucumber.api.junit.Cucumber;
 		//tags={"@Register","@Four"}
 		
 		)
- public class Runner {
+ public class TestRunner {
 
 }
